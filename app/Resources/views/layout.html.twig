@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html {% block htmlBackground %} {% endblock htmlBackground %}>
+  <head>
+
+    {{ sonata_seo_title() }}
+    {{ sonata_seo_metadatas() }}
+    
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+{% stylesheets
+	'css/bootstrap.css'
+  	'css/bootstrap-responsive.css'
+
+   filter='cssrewrite, ?yui_css'
+   output='css/compiled/main.css' %}
+  <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+{% endstylesheets %}
+
+
+  </head>
+
+  <body>
+ 
+  	
+<div>
+	<h1>CodeCraft</h1>
+
+	  	{% for flashMessage in app.session.flashbag.get('notice') %}
+	    <div class="flash-notice">
+	        {{ flashMessage }}
+	    </div>
+		{% endfor %}
+
+    	
+
+		
+			
+			
+
+							  	{% block body %}
+  								{% endblock %}
+
+
+  				
+	
+		
+</body>
+
+  	{% javascripts filter='?yui_js'
+  	'js/jquery-1.10.2.min.js'
+  	'js/bootstrap.min.js'
+	  
+	  output='js/compiled/main.js'
+  	   %}
+
+	  <script type="text/javascript" src="{{ asset_url }}"></script>
+
+	{% endjavascripts %}
+
+	
+
+  </html>
