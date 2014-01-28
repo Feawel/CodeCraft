@@ -12,6 +12,16 @@ class LanguageFormType extends AbstractType
         
     }
 
+     /**
+     * @param OptionsResolverInterface $resolver
+     */
+    public function setDefaultOptions(OptionsResolverInterface $resolver)
+    {
+        $resolver->setDefaults(array(
+            'data_class' => 'SdA\UserBundle\Entity\Language'
+        ));
+    }
+
     public function getName()
     {
         return 'sda_language';

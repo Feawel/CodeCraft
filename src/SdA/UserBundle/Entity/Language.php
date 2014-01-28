@@ -39,6 +39,11 @@ class Language
         return $this->id;
     }
 
+    public function __toString()
+    {
+        return $this->name;
+    }
+
     /**
      * Set name
      *

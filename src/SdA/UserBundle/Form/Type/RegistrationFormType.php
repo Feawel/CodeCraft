@@ -34,13 +34,7 @@ class RegistrationFormType extends BaseType
                                 ),
                                 'multiple'  => false,
                             ))
-                ->add('languages', 'collection', array(
-                        'type' => new LanguageFormType(),
-                        'allow_add' => true,
-                        'allow_delete' => true,
-                        'by_reference' => false,
-                        'label' => 'Language', 
-                    ))
+                ->add('languages')
                 ;
 
     }
