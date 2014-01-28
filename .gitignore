@@ -1,6 +1,8 @@
 app/bootstrap.php.cache
 app/cache/*
 app/logs/*
+app/config/parameters.yml
+app/config/parameters.yml.dist
 vendor
 composer.phar
 composer.lock
