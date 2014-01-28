@@ -4,6 +4,7 @@ namespace Sda\UserBundle\Form\Type;
 
 use Symfony\Component\Form\FormBuilderInterface;
 use FOS\UserBundle\Form\Type\RegistrationFormType as BaseType;
+use SdA\UserBundle\Form\Type\LanguageFormType;
 
 class RegistrationFormType extends BaseType
 {
@@ -33,7 +34,13 @@ class RegistrationFormType extends BaseType
                                 ),
                                 'multiple'  => false,
                             ))
-                ->add('languages', 'entity', array('class' => 'SdA\UserBundle\Entity\Language', 'label' => 'Langages'))
+                ->add('languages', 'collection', array(
+                        'type' => new LanguageFormType(),
+                        'allow_add' => true,
+                        'allow_delete' => true,
+                        'by_reference' => false,
+                        'label' => 'Language', 
+                    ))
                 ;
 
     }

@@ -55,7 +55,7 @@
 			tincidunt neque at ullamcorper. Nunc ut iaculis ipsum. Praesent a
 			vulputate ante. Sed lobortis ultrices neque nec porttitor. In eget
 			rutrum urna. Aenean adipiscing elit sit amet dui sagittis imperdiet.</p>
-		<a href="{{ path('fos_user_registration_register') }}" class="btn btn-success">Je m'inscris <span
+		<a href="#myModal" role="button"  data-toggle="modal" class="btn btn-success">Je m'inscris <span
 			class="glyphicon glyphicon-chevron-right"></span></a>
 	</div>
 	<hr>
@@ -81,4 +81,23 @@
 	<hr>
 
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">S'inscrire</h4>
+      </div>
+      <div class="modal-body">
+        {{ render(controller('FOSUserBundle:Registration:register')) }}
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 {% endblock body %}
+
+{% block js_add %}
+
+{% endblock js_add %}
