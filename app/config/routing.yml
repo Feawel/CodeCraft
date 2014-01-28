@@ -1,3 +1,7 @@
+sd_a_user:
+    resource: "@SdAUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
 sd_a_welcome:
     resource: "@SdAWelcomeBundle/Resources/config/routing.yml"
     prefix:   /

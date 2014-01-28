@@ -32,6 +32,7 @@ class AppKernel extends Kernel
         	new CoreSphere\ConsoleBundle\CoreSphereConsoleBundle(),
             new SdA\WelcomeBundle\SdAWelcomeBundle(),
         	new Stfalcon\Bundle\TinymceBundle\StfalconTinymceBundle(),
+            new SdA\UserBundle\SdAUserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
