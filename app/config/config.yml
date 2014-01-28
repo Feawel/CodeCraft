@@ -90,11 +90,11 @@ sonata_seo:
     default:          sonata.seo.page.default
     encoding:         UTF-8
     page:
-        title:            Djip - l'info dans tous les sens
+        title:            CodeCraft
         metas:
             name:
                 keywords:             foo bar
-                description:          Djip est un site d'actualité communautaire d'un nouveau genre, qui permet aux utilisateurs connaisseurs d'un domaine particulier de partager leur savoir sur une actualité de façon claire et concise. L'objectif est de comprendre le commencement de chaque situation qui nous intéresse dans la profusion d'information que l'on reçoit chaque jour.
+                description:          dscription
                 robots:               index, follow
 
             property:
@@ -104,8 +104,8 @@ sonata_seo:
 
                 # Open Graph information
                 # see http://developers.facebook.com/docs/opengraphprotocol/#types or http://ogp.me/
-                'og:site_name':       Djip - l'info dans tous les sens
-                'og:description':     Captez l'info qu'il vous faut
+                'og:site_name':       CodeCraft
+                'og:description':     description
 
             http-equiv:
                 'Content-Type':         text/html; charset=utf-8

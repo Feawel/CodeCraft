@@ -11,6 +11,11 @@ class WelcomeController extends Controller
         return $this->render('SdAWelcomeBundle:Welcome:index.html.twig');
     }
     
+    public function hackathonAction()
+    {
+    	return $this->render('SdAWelcomeBundle:Welcome:hackathon.html.twig');
+    }
+    
     public function aboutAction()
     {
     	return $this->render('SdAWelcomeBundle:Welcome:about.html.twig');
