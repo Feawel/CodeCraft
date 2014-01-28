@@ -1,62 +1,45 @@
 <!DOCTYPE html>
-<html {% block htmlBackground %} {% endblock htmlBackground %}>
-  <head>
+<html   {% block htmlBackground %} {% endblock htmlBackground %}>
+<head>
 
-    {{ sonata_seo_title() }}
-    {{ sonata_seo_metadatas() }}
-    
-	<!--[if lt IE 9]>
+{{ sonata_seo_title() }} {{ sonata_seo_metadatas() }}
+
+<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-{% stylesheets
-  	'css/pure.min.css'
-	'css/bootstrap.min.css'
-	'css/main.css'
-
-
-   filter='cssrewrite, ?yui_css'
-   output='css/compiled/main.css' %}
-  <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+{% stylesheets 'css/pure.min.css' 'css/bootstrap.min.css' 'css/main.css'
+filter='cssrewrite, ?yui_css' output='css/compiled/main.css' %}
+<link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
 {% endstylesheets %}
 
+</head>
 
-  </head>
+<body>
 
-  <body>
- 
-
-	  	{% for flashMessage in app.session.flashbag.get('notice') %}
-	    <div class="flash-notice">
-	        {{ flashMessage }}
-	    </div>
-		{% endfor %}
-
-    	
-
-		
-			
-			
-
-							  	{% block body %}
-  								{% endblock %}
-
-
-  				
+	{% for flashMessage in app.session.flashbag.get('notice') %}
+		<div class="flash-notice">{{ flashMessage }}</div>
+	{% endfor %} 
 	
-		
+	{% block body %} 
+	{% endblock %}
+
+	<footer>
+		<div class="container">
+    		<div class="center-block">
+    			<p>
+    				Copyright © CodeCraft 2014 · <a href="#facebook">Facebook</a> · <a
+    					href="#twitter">Twitter</a> · <a href="#google+">Google+</a>
+    			</p>
+    		</div>
+    	</div>
+	</footer>
 </body>
 
-  	{% javascripts filter='?yui_js'
-  	'js/jquery-1.10.2.min.js'
-  	'js/bootstrap.min.js'
-	  
-	  output='js/compiled/main.js'
-  	   %}
+{% javascripts filter='?yui_js' 'js/jquery-1.10.2.min.js'
+'js/bootstrap.min.js' output='js/compiled/main.js' %}
 
-	  <script type="text/javascript" src="{{ asset_url }}"></script>
+<script type="text/javascript" src="{{ asset_url }}"></script>
 
-	{% endjavascripts %}
+{% endjavascripts %}
 
-	
-
-  </html>
+</html>
