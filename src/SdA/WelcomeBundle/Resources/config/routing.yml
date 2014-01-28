@@ -1,6 +1,10 @@
 sd_a_welcome_homepage:
     pattern:  /
     defaults: { _controller: SdAWelcomeBundle:Welcome:index }
+    
+sd_a_welcome_hackathon:
+    pattern:  /hackathon
+    defaults: { _controller: SdAWelcomeBundle:Welcome:hackathon }
 
 sd_a_welcome_about:
     pattern:  /about

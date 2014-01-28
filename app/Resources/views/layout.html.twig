@@ -9,8 +9,8 @@
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 {% stylesheets
-	'css/bootstrap.css'
-  	'css/bootstrap-responsive.css'
+	'css/bootstrap.min.css'
+	'css/main.css'
 
    filter='cssrewrite, ?yui_css'
    output='css/compiled/main.css' %}
@@ -22,9 +22,6 @@
 
   <body>
  
-  	
-<div>
-	<h1>CodeCraft</h1>
 
 	  	{% for flashMessage in app.session.flashbag.get('notice') %}
 	    <div class="flash-notice">
