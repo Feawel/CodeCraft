@@ -1,6 +1,6 @@
 {% extends "::layout.html.twig" %} {% block body %}
 
-<div class="navbar navbar-default navbar-fixed-top navbar-inverse"
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse"
 	role="navigation">
 	<div class="container">
 		<div class="navbar-header">
@@ -24,7 +24,7 @@
 			</ul>
 		</div>
 	</div>
-</div>
+</nav>
 
 <div class="container">
 
@@ -76,11 +76,16 @@
 
 	<div id="contact">
 		<h2>Contact</h2>
-		<p>Formulaire de contact</p>
+		{{ render(controller('SdAWelcomeBundle:Welcome:contact'))  }}
+
+		<p>Vous pouvez également nous envoyer un mail à <a href="mailto:contact@codecraft.co">contact@codecraft.co</a>.</p>
 	</div>
 	<hr>
 
 </div>
+
+
+
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -88,7 +93,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">S'inscrire</h4>
+        <h4 class="modal-title" id="myModalLabel">Inscription</h4>
       </div>
       <div class="modal-body">
         {{ render(controller('FOSUserBundle:Registration:register')) }}

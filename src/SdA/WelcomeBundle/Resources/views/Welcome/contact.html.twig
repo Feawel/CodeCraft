@@ -1,0 +1,27 @@
+<form action="{{ path('sd_a_welcome_contact') }}" {{ form_enctype(form) }} method="POST" class="pure-form pure-form-stacked">
+    <fieldset>
+
+	<div >
+            {{ form_label(form.title) }}
+	        {{ form_errors(form.title) }}
+	        {{ form_widget(form.title, { 'attr': {'style': 'width:250px'} }) }}
+        </div>
+
+        <div >
+            {{ form_label(form.content) }}
+	        {{ form_errors(form.content) }}
+	        {{ form_widget(form.content, { 'attr': {'style': 'width:250px'} }) }}
+        </div>
+
+        <div >
+            {{ form_label(form.callback) }}
+	        {{ form_errors(form.callback) }}
+	        {{ form_widget(form.callback, { 'attr': {'style': 'width:250px'} }) }}
+        </div>
+
+        {{ form_end(form) }}
+
+            <button type="submit" style="width:250px;" class="glyphicon glyphicon-check pure-button pure-input-1-2 pure-button-primary">Envoyer</button>
+        </div>
+    </fieldset>
+</form>
